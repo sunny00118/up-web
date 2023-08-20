@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background-color: #f0f0f0;
+}
+
+/* Header styles */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(sidekix-media-WgkA3CSFrjc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 190px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #009688;
+}
+
+/* Content styles */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-top: 80px;
+    color: #009688;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    color: #fff;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+/* Styles for the Our Team section */
+.team {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.team-members-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    width: calc(33.33% - 40px); /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 4px solid #90EE90; /* Light green border */
+    padding: 4px; /* Increase padding to create gap between ring and circle */
+    box-sizing: content-box; /* Ensure the padding doesn't affect the circle's size */
+}
+
+.team-member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* To ensure the image remains circular within the circle */
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.team-member p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* Animation for message popup */
+@keyframes popUpAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Contact Us styles */
+.contact {
+    background-color: #009688;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    height: 150px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #009688;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #009688;
+    color: #fff;
+}
+
+/* Styles for the Our Team section */
+.team {
+    position: relative;
+    background-image: url('our\ team.jpg'); /* Update to the image's path */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('our\ team.jpg'); /* Update to the image's path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px); /* Adjust the blur amount */
+    z-index: -1; /* Place the blurred overlay behind the content */
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Contact Us styles */
+.contact {
+    position: relative;
+    background-image: url('contact\ us.jpg'); /* Update to the image's path */
+    background-size: cover;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('contact\ us.jpg'); /* Update to the image's path */
+    background-size: cover;
+    filter: blur(20px); /* Adjust the blur amount */
+    z-index: -1; /* Place the blurred overlay behind the content */
+}
+
+
